@@ -19,19 +19,14 @@ client.authorize(function(err, tokens){
  async function gsrun(cl){
 
     const gsapi = google.sheets({version:'v4', auth: cl});
-    //1-lWmmll8gWzlF5V_3dVOehX9e_uSaYfdGqJ0w2B9C3g
-    //1jlI5IdReXO_56nrT1e4b868hMOa6wzTP1qst1zsUBZc
     const opt = {
-        spreadsheetId : '1-lWmmll8gWzlF5V_3dVOehX9e_uSaYfdGqJ0w2B9C3g',
+        spreadsheetId : process.env.SPREADSHEET_ID,
         range: 'Data!A1:Y100'
     };
-//https://docs.google.com/spreadsheets/d/1-lWmmll8gWzlF5V_3dVOehX9e_uSaYfdGqJ0w2B9C3g/edit#gid=0
-//https://console.cloud.google.com/apis/credentials?showWizardSurvey=true&project=react-graph-309616
    let data = await gsapi.spreadsheets.values.get(opt);
    let dataArray = data.data.values;
    let newDataArray = dataArray.map(function(r)
    {
-    //  r.push(r[0] + '-' + r[1]); 
      return r;
    });
    array = newDataArray
