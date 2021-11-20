@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "RESTful API with Node.js, Express, and PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "googleapis": "^67.1.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1",
+    "react-chartjs-2": "^2.11.1",
+    "socket.io": "^4.0.0"
+  }
+}
